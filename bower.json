@@ -1,0 +1,29 @@
+{
+  "name": "todo1",
+  "version": "0.0.0",
+  "homepage": "https://github.com/kevmo/todo1",
+  "authors": [
+    "kevmo <k.james.moore@gmail.com>"
+  ],
+  "description": "ToDo MVC w Backbone",
+  "main": "index.html",
+  "keywords": [
+    "todo",
+    "mvc",
+    "backbone"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "underscore": "~1.7.0",
+    "jquery": "~2.1.3",
+    "backbone": "~1.1.2"
+  }
+}
