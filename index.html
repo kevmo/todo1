@@ -35,12 +35,33 @@
         <div class="view">
             <input type="checkbox" class="toggle"
                    <%= completed ? 'checked' : '' %>>
-            <label><%= title %></label>
+            <label><%- title %></label>
             <button class="destroy"></button>
         </div>
-        <button class="edit" value=<%= title %></button>
+        <button class="edit" value=<%- title %></button>
+        <% console.log("Item view created.") %>
     </script>
-    <script type="text/template" id="stats-template"></script>
+
+    <script type="text/template" id="stats-template">
+        <span id="todo-count"><strong><%= remaining %></strong>
+        <% remaining === 1 ? 'item' : 'items' %> left
+        </span>
+        <ul id="filters">
+            <li>
+                <a href="#/" class="selected">All</a>
+            </li>
+            <li>
+                <a href="#/active">Active</a>
+            </li>
+            <li>
+                <a href="#/completed">Completed</a>
+            </li>
+        </ul>
+        <% if (completed){ %>
+            <button id="clear-completed">Clear completed
+            (<% completed %>)</button>
+        <% } %>
+    </script>
 
     <!-- libraries-->
     <script src="js/lib/jquery/dist/jquery.min.js"></script>
