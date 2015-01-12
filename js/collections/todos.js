@@ -37,7 +37,7 @@ var TodoList = Backbone.Collection.extend({
     next = 1;
    } else {
      next =  this.last().get('order') + 1;
-   };
+   }
    return next;
  },
 
