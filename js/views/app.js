@@ -32,7 +32,7 @@ app.AppView = Backbone.View.extend({
     this.listenTo(app.Todos, 'reset', this.addAll);
     this.listenTo(app.Todos, 'change:completed', this.filterOne);
     this.listenTo(app.Todos, 'filter', this.filterAll);
-    this.listenTO(app.Todos, 'all', this.render);
+    this.listenTo(app.Todos, 'all', this.render);
 
     app.Todos.fetch();
   },
@@ -66,6 +66,7 @@ app.AppView = Backbone.View.extend({
   },
 
 
+  // more events bindings
   // delegated events for creating/clearing items...
   // declarative callbacks
   events: {
@@ -125,7 +126,7 @@ app.AppView = Backbone.View.extend({
     return false;
   },
 
-
+  // mark all as complete
   toggleAllComplete: function(){
     var completed = this.allCheckbox.checked;
 

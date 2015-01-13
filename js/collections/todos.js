@@ -24,9 +24,7 @@ var TodoList = Backbone.Collection.extend({
 
   // business logic - filter unfinished items
  remaining: function(){
-  return this.filter(function (todo){
     return this.without.apply(this, this.completed());
-  });
  },
 
  // business logic: keep todos in sequential order - function
